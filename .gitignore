@@ -1,0 +1,6 @@
+ilab-env/
+instructlab-granite-7b-lab/
+instructlab-granite-7b-lab-trained/
+yes/
+__pycache__/
+*.gguf

@@ -1,0 +1,75 @@
+version: 3
+domain: finance
+created_by: stavan-sagala
+seed_examples:
+  - context: |
+      CONSOLIDATED BALANCE SHEETS (In millions)
+      September 27, 2025
+      Cash and cash equivalents $ 35,934
+      Marketable securities 18,763
+      Accounts receivable, net 39,777
+      Inventories 5,718
+      Total current assets 147,957
+    questions_and_answers:
+      - question: Extract Cash and cash equivalents for 2025.
+        answer: Cash and cash equivalents is 35,934 million.
+      - question: What is the value of Accounts receivable net?
+        answer: Accounts receivable net is 39,777 million.
+      - question: What is the Inventories value on the balance sheet?
+        answer: Inventories is 5,718 million.
+  - context: |
+      CONSOLIDATED STATEMENTS OF OPERATIONS (In millions)
+      Years ended September 27, 2025
+      Products $ 307,003
+      Services 109,158
+      Total net sales 416,161
+      Gross margin 195,201
+    questions_and_answers:
+      - question: What is Total net sales for fiscal year 2025?
+        answer: Total net sales is 416,161 million.
+      - question: Extract Gross margin from the income statement.
+        answer: Gross margin is 195,201 million.
+      - question: How much are Products net sales?
+        answer: Products net sales is 307,003 million.
+  - context: |
+      Accounts payable $ 69,860
+      Total current liabilities 165,631
+      Term debt 78,328
+      Total liabilities 285,508
+    questions_and_answers:
+      - question: What is Accounts payable?
+        answer: Accounts payable is 69,860 million.
+      - question: Extract Total liabilities from the balance sheet.
+        answer: Total liabilities is 285,508 million.
+      - question: What is Total current liabilities?
+        answer: Total current liabilities is 165,631 million.
+  - context: |
+      Operating income 133,050
+      Net income $ 112,010
+      Earnings per share Basic $ 7.49
+      Diluted $ 7.46
+    questions_and_answers:
+      - question: What is Net income for 2025?
+        answer: Net income is 112,010 million.
+      - question: Extract Operating income.
+        answer: Operating income is 133,050 million.
+      - question: What is Basic earnings per share?
+        answer: Basic earnings per share is 7.49 dollars.
+  - context: |
+      Total assets $ 359,241
+      Total liabilities 285,508
+      Total shareholders equity 73,733
+      Total liabilities and shareholders equity $ 359,241
+    questions_and_answers:
+      - question: What are Total assets?
+        answer: Total assets is 359,241 million.
+      - question: Extract Total shareholders equity.
+        answer: Total shareholders equity is 73,733 million.
+      - question: What is Total liabilities and shareholders equity?
+        answer: Total liabilities and shareholders equity is 359,241 million.
+document_outline: Training data for extracting structured financial values from 10-K filing text.
+document:
+  repo: https://github.com/instructlab/taxonomy.git
+  commit: main
+  patterns:
+    - "*.md"
